@@ -16,7 +16,7 @@ const Post = require("./database_models/postModel");
 const fs = require("fs")
 
 
-mongoose.connect(`mongodb+srv://lissadev:${process.env.MONGOPASSWORD}@cluster0.5cto3ns.mongodb.net/?retryWrites=true&w=majority`,{
+mongoose.connect(`mongodb+srv://mern-blog:${process.env.MONGOPASSWORD}@cluster0.5cto3ns.mongodb.net/?retryWrites=true&w=majority`,{
     useUnifiedTopology:true,
     useNewUrlParser:true
 }).then(console.log("Remotely connected to the database"))
