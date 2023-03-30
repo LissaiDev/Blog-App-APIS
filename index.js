@@ -148,6 +148,7 @@ app.get("/post/:id", async (req, res) => {
 
 app.get("/posts", async (req, res) => {
     const posts = await Post.find().populate("author", ["username"]).sort({ 'createdAt': -1 }).limit(20)
+    console.log(posts)
     res.json(posts)
 })
 
