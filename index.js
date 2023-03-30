@@ -107,7 +107,8 @@ app.post("/logout", (req, res) => {
 })
 
 app.post("/createPost", upload.single('file'), (req, res) => {
-    const { token } = req.cookies
+    const { token } = req.cookies;
+    console.log(token)
     if (token) {
         jwt.verify(token, process.env.MONGOPASSWORD, {}, (err, info) => {
             if (!err) {
