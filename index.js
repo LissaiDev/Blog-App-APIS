@@ -24,7 +24,7 @@ mongoose.connect(`mongodb+srv://mern-blog:${process.env.MONGOPASSWORD}@cluster0.
 const app = express();
 app.use(cookieParser())
 app.use(express.json());
-app.use(cors({ credentials: true, origin: "https://lissaidev-community.onrender.com" }));
+app.use(cors({ credentials: true, origin:"http://localhost:3000" }));
 app.use("/uploads", express.static(__dirname + "/uploads"))
 
 app.post('/register', [
